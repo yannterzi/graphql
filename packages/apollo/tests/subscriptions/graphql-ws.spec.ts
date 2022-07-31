@@ -1,14 +1,19 @@
-import { INestApplication } from '@nestjs/common';
-import { Test } from '@nestjs/testing';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import ApolloClient, { ApolloError } from 'apollo-client';
-import { gql } from 'graphql-tag';
-import { Client, Context, createClient } from 'graphql-ws';
 import * as ws from 'ws';
+
+import {
+  ApolloClient,
+  ApolloError,
+  InMemoryCache,
+  gql,
+} from '@apollo/client/core';
+import { Client, Context, createClient } from 'graphql-ws';
+
 import { AppModule } from './app/app.module';
-import { pubSub } from './app/notification.resolver';
 import { GraphQLWsLink } from './utils/graphql-ws.link';
+import { INestApplication } from '@nestjs/common';
 import { MalformedTokenException } from './utils/malformed-token.exception';
+import { Test } from '@nestjs/testing';
+import { pubSub } from './app/notification.resolver';
 
 const subscriptionQuery = gql`
   subscription TestSubscription($id: String!) {

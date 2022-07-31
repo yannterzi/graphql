@@ -27,7 +27,7 @@ import { PostResolver } from '../code-first-federation/post/post.resolver';
 import { PostService } from '../code-first-federation/post/post.service';
 import { Test } from '@nestjs/testing';
 import { UserResolver } from '../code-first-federation/user/user.resolver';
-import { gql } from 'graphql-tag';
+import { gql } from '@apollo/client/core';
 import { printedSchemaSnapshot } from '../utils/printed-schema-with-cache-control.snapshot';
 
 describe('Code-first - Federation with caching', () => {

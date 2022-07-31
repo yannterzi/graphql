@@ -32,7 +32,7 @@ import { GraphQLSchemaHost } from '../graphql-schema.host';
 import { Injectable } from '@nestjs/common';
 import { TypeDefsDecoratorFactory } from './type-defs-decorator.factory';
 import { extend } from '../utils';
-import { gql } from 'graphql-tag';
+import { gql } from '@apollo/client/core';
 import { isString } from '@nestjs/common/utils/shared.utils';
 import { loadPackage } from '@nestjs/common/utils/load-package.util';
 import { mergeSchemas } from '@graphql-tools/schema';

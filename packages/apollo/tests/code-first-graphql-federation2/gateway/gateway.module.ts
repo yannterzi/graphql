@@ -1,7 +1,8 @@
-import { IntrospectAndCompose } from '@apollo/gateway-v2';
-import { Module } from '@nestjs/common';
-import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloGatewayDriver, ApolloGatewayDriverConfig } from '../../../lib';
+
+import { GraphQLModule } from '@nestjs/graphql';
+import { IntrospectAndCompose } from '@apollo/gateway';
+import { Module } from '@nestjs/common';
 
 @Module({
   imports: [
