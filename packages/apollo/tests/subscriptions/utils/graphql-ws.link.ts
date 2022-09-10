@@ -1,7 +1,8 @@
-import { ApolloLink, Operation, FetchResult } from 'apollo-link';
-import { Observable } from 'apollo-client/util/Observable';
-import { print } from 'graphql';
+import { ApolloLink, FetchResult, Operation } from '@apollo/client/core';
+
 import { Client } from 'graphql-ws';
+import { Observable } from '@apollo/client/utilities';
+import { print } from 'graphql';
 
 export class GraphQLWsLink extends ApolloLink {
   private client: Client;

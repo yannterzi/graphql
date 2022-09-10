@@ -108,8 +108,7 @@ input NewRecipeInput {
 type Subscription {
   """subscription description"""
   recipeAdded: Recipe!
-}
-`;
+}`;
 
 export const sortedPrintedSchemaSnapshot = `# ------------------------------------------------------
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
@@ -205,5 +204,4 @@ union SearchResultUnion = Ingredient | Recipe
 type Subscription {
   """subscription description"""
   recipeAdded: Recipe!
-}
-`;
+}`;
